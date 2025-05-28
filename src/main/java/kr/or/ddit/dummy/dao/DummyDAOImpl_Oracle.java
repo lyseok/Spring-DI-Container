@@ -2,6 +2,9 @@ package kr.or.ddit.dummy.dao;
 
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
+@Repository("oracle")
 public class DummyDAOImpl_Oracle implements DummyDAO{
 
 	@Override

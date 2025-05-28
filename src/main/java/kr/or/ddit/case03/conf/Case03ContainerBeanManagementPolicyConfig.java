@@ -24,24 +24,20 @@ import lombok.extern.slf4j.Slf4j;
  * 2. 구체적인 설정이 없으면, eager-loading 방식으로 객체를 미리 생성함
  */
 @Slf4j
-@Lazy
 public class Case03ContainerBeanManagementPolicyConfig {
-//	@Bean
-//	@Lazy
-//	@Scope()
-//	public StringBuffer sb1() {
-//		log.info("sb1 팩토리 메소드 실행 : {}");
-//		return new StringBuffer();
-//	}
-//	@Bean
-//	public StringBuffer sb2() {
-//		log.info("sb2 팩토리 메소드 실행 : {}");
-//		return new StringBuffer();
-//	}
+	@Bean
+	public StringBuffer sb1() {
+		log.info("sb1 팩토리 메소드 실행 : {}");
+		return new StringBuffer();
+	}
+	@Bean
+	public StringBuffer sb2() {
+		log.info("sb2 팩토리 메소드 실행 : {}");
+		return new StringBuffer();
+	}
 	
 	@Bean(initMethod = "start", destroyMethod = "expire")
 //	@Scope("prototype")
-	@Lazy(false)
 	public EagerDummy eagerDummy(EagerSingletonDummy esd) {
 		EagerDummy ed = new EagerDummy();
 		ed.setEsd(esd);
@@ -49,7 +45,6 @@ public class Case03ContainerBeanManagementPolicyConfig {
 	}
 	
 	@Bean
-	@Lazy(false)
 	@Scope("singleton")
 	public EagerSingletonDummy eagerSingletonDummy() {
 		return new  EagerSingletonDummy();

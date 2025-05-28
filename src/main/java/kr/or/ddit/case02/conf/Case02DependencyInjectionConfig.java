@@ -19,10 +19,10 @@ public class Case02DependencyInjectionConfig {
 		return new Case02DAO();
 	}
 	
-//	@Bean
-//	public Case02DAO dao2() {
-//		return new Case02DAO();
-//	}
+	@Bean
+	public Case02DAO dao2() {
+		return new Case02DAO();
+	}
 	
 	@Bean 
 	public Case02Service srvice(Case02DAO dao1, StringBuffer optionBuffer) {

@@ -2,6 +2,9 @@ package kr.or.ddit.dummy.dao;
 
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
+@Repository("mariadb")
 public class DummyDAOImpl_MariaDB implements DummyDAO{
 
 	@Override

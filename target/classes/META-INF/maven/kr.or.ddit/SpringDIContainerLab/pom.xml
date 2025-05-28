@@ -7,6 +7,19 @@
   	<maven.compiler.source>21</maven.compiler.source>
   	<maven.compiler.target>21</maven.compiler.target>
   </properties>
+	<build>
+	  <plugins>
+	     <plugin>
+	        <groupId>org.apache.maven.plugins</groupId>
+	        <artifactId>maven-compiler-plugin</artifactId>
+	        <version>3.13.0</version>
+	        <!-- 설정정보 추가 - 파라미터가 배열 0,1로 뜨는걸 파라미터 명으로 뜨게 해주려고 -->
+	        <configuration>
+	           <parameters>true</parameters>
+	        </configuration>
+	     </plugin>
+	  </plugins>
+	</build>
   <dependencyManagement>
   	<dependencies>
   		<!-- springframework/spring-framework-bom -->
@@ -46,6 +59,13 @@
 			<version>1.18.38</version>
 		</dependency>
   		
+  		<!-- IO -->
+		<dependency>
+		  <groupId>commons-io</groupId>
+		  <artifactId>commons-io</artifactId>
+		  <version>2.19.0</version>
+		</dependency>
+		
 		<!-- JUnit -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>

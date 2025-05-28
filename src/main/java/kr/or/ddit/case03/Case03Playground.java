@@ -13,8 +13,8 @@ public class Case03Playground {
 				new AnnotationConfigApplicationContext(Case03ContainerBeanManagementPolicyConfig.class);
 		context.registerShutdownHook();
 		StringBuffer sb1 = context.getBean("sb1", StringBuffer.class);
-		StringBuffer sb2 = context.getBean("sb1", StringBuffer.class);
-//		log.info("sb1 == sb2 : {} ", sb1 == sb2);
+		StringBuffer sb2 = context.getBean("sb2", StringBuffer.class);
+		log.info("sb1 == sb2 : {} ", sb1 == sb2);
 		
 		log.info("--------------------");
 //		EagerDummy ed = context.getBean(EagerDummy.class);

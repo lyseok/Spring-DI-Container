@@ -16,7 +16,7 @@ public class Case02Playground {
 		
 		context.registerShutdownHook();
 		
-		Case02DAO dao = context.getBean(Case02DAO.class);
+		Case02DAO dao = context.getBean("dao1", Case02DAO.class);
 		Case02Service service = context.getBean(Case02Service.class);
 		
 		log.info("dao : {} ", dao);
