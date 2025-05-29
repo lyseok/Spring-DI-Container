@@ -28,15 +28,16 @@ public class Case07playground {
 		
 //		Resource fR = context.getResource("file:/Users/eehdbs/Desktop/스크린샷 2025-05-25 21.29.21.png");
 		Resource fR = resVO.getFR();
-		printResourceInfo(fR);
+//		printResourceInfo(fR);
 		
 //		Resource cR = context.getResource("classpath:kr/or/ddit/case05/conf/Case05-Context.xml");
 		Resource cR = resVO.getCR();
-		printResourceInfo(cR);
+//		printResourceInfo(cR);
 		
 //		Resource wR = context.getResource("https://images.pexels.com/photos/17532029/pexels-photo-17532029.jpeg");
 		Resource wR = resVO.getWR();
-		printResourceInfo(wR);
+//		printResourceInfo(wR);
+		
 //		String filename = cR.getFilename();
 //		File file = new File("/Users/eehdbs/", filename);
 //		WritableResource dest = new FileSystemResource(file);

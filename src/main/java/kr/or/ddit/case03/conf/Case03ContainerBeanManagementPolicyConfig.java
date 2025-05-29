@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 
 import kr.or.ddit.case03.objs.EagerDummy;
+import kr.or.ddit.case03.objs.EagerObj;
 import kr.or.ddit.case03.objs.EagerSingletonDummy;
 import kr.or.ddit.case03.objs.LazyDummy;
 import kr.or.ddit.case03.objs.LazyPrototypeDummy;
@@ -25,40 +26,45 @@ import lombok.extern.slf4j.Slf4j;
  */
 @Slf4j
 public class Case03ContainerBeanManagementPolicyConfig {
-	@Bean
-	public StringBuffer sb1() {
-		log.info("sb1 팩토리 메소드 실행 : {}");
-		return new StringBuffer();
-	}
-	@Bean
-	public StringBuffer sb2() {
-		log.info("sb2 팩토리 메소드 실행 : {}");
-		return new StringBuffer();
-	}
-	
-	@Bean(initMethod = "start", destroyMethod = "expire")
+//	@Bean
+//	public StringBuffer sb1() {
+//		log.info("sb1 팩토리 메소드 실행 : {}");
+//		return new StringBuffer();
+//	}
+//	@Bean
+//	public StringBuffer sb2() {
+//		log.info("sb2 팩토리 메소드 실행 : {}");
+//		return new StringBuffer();
+//	}
+//	
+//	@Bean(initMethod = "start", destroyMethod = "expire")
+////	@Scope("prototype")
+//	public EagerDummy eagerDummy(EagerSingletonDummy esd) {
+//		EagerDummy ed = new EagerDummy();
+//		ed.setEsd(esd);
+//		return ed;
+//	}
+//	
+//	@Bean
+//	@Scope("singleton")
+//	public EagerSingletonDummy eagerSingletonDummy() {
+//		return new  EagerSingletonDummy();
+//	}
+//	
+//	@Bean
+//	@Lazy
+//	public LazyDummy lazyDummy() {
+//		return new LazyDummy();
+//	}
+//	
+//	@Bean
 //	@Scope("prototype")
-	public EagerDummy eagerDummy(EagerSingletonDummy esd) {
-		EagerDummy ed = new EagerDummy();
-		ed.setEsd(esd);
-		return ed;
-	}
+//	public LazyPrototypeDummy lazyPrototypeDummy() {
+//		return new LazyPrototypeDummy();
+//	}
 	
-	@Bean
-	@Scope("singleton")
-	public EagerSingletonDummy eagerSingletonDummy() {
-		return new  EagerSingletonDummy();
-	}
-	
-	@Bean
-	@Lazy
-	public LazyDummy lazyDummy() {
-		return new LazyDummy();
-	}
-	
-	@Bean
-	@Scope("prototype")
-	public LazyPrototypeDummy lazyPrototypeDummy() {
-		return new LazyPrototypeDummy();
+	@Bean(initMethod = "init", destroyMethod = "destroy")
+	public EagerObj eagerObj() {
+		return new EagerObj();
 	}
 }
