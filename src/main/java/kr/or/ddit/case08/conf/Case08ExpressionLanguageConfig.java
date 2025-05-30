@@ -46,7 +46,7 @@ public class Case08ExpressionLanguageConfig {
       ) {
     return new OriginalVO(list, map, null, res, number);
   };
-  
+ 
   @Bean
   public DestVO dest(
 //        @Value("#{original.str ?: '기본값'}") String str

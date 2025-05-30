@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="kr.or.ddit.case11.objs.mapper.LprodMapper">
+	<resultMap type="LprodVO" id="lprodMap" autoMapping="false">
+		<id property="lprodGu" column="GU"/>
+		<result property="lprodId" column="LPROD_ID"/>
+		<result property="lprodName" column="LPROD_NAME"/>
+		
+		<collection property="prodList" ofType="ProdVO" autoMapping="true">
+			<id property="prodId" column="PROD_ID"/>
+		</collection>
+		
+	</resultMap>
+	
+	<select id="selectLprodList" resultType="LprodVO">
+		SELECT LPROD_ID, LPROD_GU, LPROD_NAME
+		FROM LPROD
+	</select>
+
+</mapper>

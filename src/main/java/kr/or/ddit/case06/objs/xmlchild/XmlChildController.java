@@ -2,7 +2,7 @@ package kr.or.ddit.case06.objs.xmlchild;
 
 import org.springframework.stereotype.Controller;
 
-import kr.or.ddit.case6.objs.parent.CommonService;
+import kr.or.ddit.case06.objs.parent.CommonService;
 import lombok.RequiredArgsConstructor;
 
 @Controller

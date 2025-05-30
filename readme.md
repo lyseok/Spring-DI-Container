@@ -11,8 +11,9 @@
 7.	컨테이너 계층 구조 형성 : kr.or.ddit.case06
 8. 	자원 검색 및 핸들링 방법 : kr.or.ddit.case07
 9. 	Spring EL(spEL) 기반의 주입 방법 : kr.or.ddit.case08
-10.	junit 기반의 테스트 컨텍스트 형성 방법 : kr.or.ddit.case09
+10.	spEL(#{}) 과 property placeholder(${})의 활용 : kr.or.ddit.case09
 
+junit 기반의 테스트 컨텍스트 형성 방법 : @SpringJunitConfig
 
 # 2. Spring + 데이터베이스 연결
 

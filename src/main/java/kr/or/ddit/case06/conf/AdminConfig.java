@@ -5,7 +5,7 @@ import org.springframework.context.annotation.FilterType;
 import org.springframework.context.annotation.ComponentScan.Filter;
 import org.springframework.stereotype.Controller;
 
-@ComponentScan(basePackages = "kr.or.ddit.case6.objs.admin"
+@ComponentScan(basePackages = "kr.or.ddit.case06.objs.admin"
 	, useDefaultFilters = false
 	, includeFilters = {@Filter(type = FilterType.ANNOTATION, classes =  Controller.class)}
 	, lazyInit = true

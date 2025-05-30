@@ -4,10 +4,10 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import kr.or.ddit.case6.conf.AdminConfig;
-import kr.or.ddit.case6.conf.ParentConfig;
-import kr.or.ddit.case6.conf.UserConfig;
-import kr.or.ddit.case6.objs.parent.CommonService;
+import kr.or.ddit.case06.conf.AdminConfig;
+import kr.or.ddit.case06.conf.ParentConfig;
+import kr.or.ddit.case06.conf.UserConfig;
+import kr.or.ddit.case06.objs.parent.CommonService;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
