@@ -13,11 +13,11 @@ public class Case05Playground {
 //				new ClassPathXmlApplicationContext("kr/or/ddit/case05/conf/Case05-Context.xml");
 				new GenericXmlApplicationContext("classpath:kr/or/ddit/case05/conf/Case05-Context.xml");
 		context.registerShutdownHook();
-//		log.info("등록된 빈의 갯수 : {}", context.getBeanDefinitionCount());
-//		String[] names = context.getBeanDefinitionNames();
-//		for(String name : names) {
-//			Object bean = context.getBean(name);
-//			log.info("{} : {}", name, bean);
-//		}
+		log.info("등록된 빈의 갯수 : {}", context.getBeanDefinitionCount());
+		String[] names = context.getBeanDefinitionNames();
+		for(String name : names) {
+			Object bean = context.getBean(name);
+			log.info("{} : {}", name, bean);
+		}
 	}
 }

@@ -1,32 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-   xmlns:context="http://www.springframework.org/schema/context"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd
     "
-    default-lazy-init="true"
-    >
-<!--    <context:annotation-config /> -->
-   <context:component-scan base-package="kr.or.ddit.case05.objs" use-default-filters="false">
-   			<context:include-filter type="annotation" expression="org.springframework.stereotype.Component"/>
-<!--    		<context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/> -->
-<!--    		<context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/> -->
-   		<context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
-   </context:component-scan>
-<!--    <bean id="case05Dao" class="kr.or.ddit.case05.objs.Case05DAO"></bean> -->
-<!--    <bean id="case05Service" class="kr.or.ddit.case05.objs.Case05Service" -->
-<!--       scope="singleton" lazy-init="true" init-method="start" -->
-<!--    > -->
-<!--       어떤 파라미터에 넘길건지 name으로 설정, ref로 xml 파일에서 만든 bean을 주입하겠다 -->
-<!--       <constructor-arg name="dao" ref="case05Dao" />  -->
-<!--    </bean> -->
-<!--    <bean id="controller" class="kr.or.ddit.case05.objs.Case05Controller" -->
-<!--       init-method="start" -->
-<!--    > -->
-<!--       <property name="service" ref="case05Service"></property> -->
-<!--    </bean> -->
+	default-lazy-init="true">
+	<!-- <context:annotation-config /> -->
+	<context:component-scan
+		base-package="kr.or.ddit.case05.objs" use-default-filters="false">
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Component" />
+		<!-- <context:include-filter type="annotation" expression="org.springframework.stereotype.Repository"/> -->
+		<!-- <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/> -->
+		<context:include-filter type="annotation"
+			expression="org.springframework.stereotype.Controller" />
+	</context:component-scan>
+	<!-- <bean id="case05Dao" class="kr.or.ddit.case05.objs.Case05DAO"></bean> -->
+	<!-- <bean id="case05Service" class="kr.or.ddit.case05.objs.Case05Service" -->
+	<!-- scope="singleton" lazy-init="true" init-method="start" -->
+	<!-- > -->
+	<!-- 어떤 파라미터에 넘길건지 name으로 설정, ref로 xml 파일에서 만든 bean을 주입하겠다 -->
+	<!-- <constructor-arg name="dao" ref="case05Dao" /> -->
+	<!-- </bean> -->
+	<!-- <bean id="controller" class="kr.or.ddit.case05.objs.Case05Controller" -->
+	<!-- init-method="start" -->
+	<!-- > -->
+	<!-- <property name="service" ref="case05Service"></property> -->
+	<!-- </bean> -->
 
 </beans>
